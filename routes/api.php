@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 // ADMIN PANEL ROUTES
-Route::group(['middleware' => 'auth:admin_api'], function() {  
+Route::group(['middleware' => 'web'], function() {  
     Route::apiResources(['user'=>'API\UserController']);
 });
 
